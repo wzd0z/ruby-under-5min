@@ -21,10 +21,6 @@ class CoursesController < ApplicationController
   def edit
   end
   
- 
-  def course_params
-      params.require(:course).permit(:description,:color)
-  end
 
   # POST /courses
   # POST /courses.json
@@ -74,6 +70,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:name, :description, :semester)
+      params.require(:course).permit(:name, :description, :semester, :color)
     end
 end
